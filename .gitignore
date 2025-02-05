@@ -19,6 +19,7 @@ lib64/
 parts/
 sdist/
 var/
+migrations/
 wheels/
 share/python-wheels/
 *.egg-info/
@@ -169,3 +170,45 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Ignorar a pasta do ambiente virtual
+venv/
+.env/
+
+# Ignorar arquivos de configuração local
+*.env
+*.local
+
+# Ignorar arquivos de banco de dados SQLite
+*.db
+*.sqlite3
+
+# Ignorar arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar arquivos de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorar arquivos de log e temporários
+*.log
+*.tmp
+*.temp
+
+# Ignorar arquivos de distribuição e build
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de dependências instaladas
+pip-selfcheck.sqlite3-journal

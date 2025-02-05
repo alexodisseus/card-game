@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Personagem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Adicionar Personagem</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="type">Tipo:</label>
+        <input type="text" id="type" name="type" required><br>
+
+        <label for="strength">Força:</label>
+        <input type="number" id="strength" name="strength" required><br>
+
+        <label for="hp">HP:</label>
+        <input type="number" id="hp" name="hp" required><br>
+
+        <label for="size">Tamanho:</label>
+        <input type="text" id="size" name="size" required><br>
+
+        <label for="speed">Velocidade:</label>
+        <input type="number" id="speed" name="speed" required><br>
+        
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" rows="4"></textarea><br>
+
+        <label for="photo">Foto:</label>
+        <input type="file" id="photo" name="photo"><br>
+
+        <button type="submit">Adicionar</button>
+    </form>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>

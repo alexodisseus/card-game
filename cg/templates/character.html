@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ character.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="character-container">
+        <h1>{{ character.name }}</h1>
+        <div class="character-image">
+            <img src="{{ url_for('static', filename='uploads/' + character.photo) }}" alt="{{ character.name }}">
+        </div>
+        <div class="character-details">
+            <p><strong>Tipo:</strong> {{ character.type }}</p>
+            <p><strong>Força:</strong> {{ character.strength }}</p>
+            <p><strong>HP:</strong> {{ character.hp }}</p>
+            <p><strong>Tamanho:</strong> {{ character.size }}</p>
+            <p><strong>Velocidade:</strong> {{ character.speed }}</p>
+            <p><strong>Descrição:</strong></p>
+            <p class="description">{{ character.description }}</p>
+        </div>
+        <a href="{{ url_for('index') }}">Voltar</a>
+    </div>
+</body>
+</html>
